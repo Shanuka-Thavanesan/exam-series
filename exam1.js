@@ -1,34 +1,57 @@
 // 1
+let empty={
+
+};
+console.log(empty);
 //  2
 var person = {
-    name: "Shanuka",
-    age: 21,
-    introduceYou: function(){console.log("Hello, my name is " + this.name);}
-}
+  name: "Shanuka",
+  age: 21,
+  introduceYou: function() {
+    console.log("Hello, my name is " + this.name );
+  }
+};
 person.introduceYou();
 
 
  // 3
-function greetStudent(student) {
-    console.log("Hello " + student.name + " Welcome to the Coding School.");
+//  method1
+// function greetStudent(student) {
+//     console.log("Hello " + student.name + " Welcome to the Coding School.");
+//   }
+//   var student = {
+//     name: "Shanuka"
+//   };
+//   greetStudent(student);
+
+// method2
+// function greetStudent() {
+//       console.log("Hello " + person.name + " Welcome to the Coding School.");
+//     };
+    
+//     greetStudent();
+
+// method 3
+var object={
+  greetStudent:function(student){
+    console.log(`hello${student.name}welcome to the Coding School`);
   }
-  var student = {
-    name: "Shanuka"
-  };
-  greetStudent(student);
+};
+  object.greetStudent({name:"Shanu"})
+
   
 
  // 4
 console.log("Using dot notation:");
-console.log("Name: " + person.name);
-console.log("age: " + person.age);
+console.log( person.name);
+console.log( person.age);
 console.log("Using bracket notation:");
-console.log("Name: " + person["name"]);
-console.log("age: " + person["age"]);
+console.log( person["name"]);
+console.log( person["age"]);
 
 // 5
 person.email = "shanuka@example.com";
-console.log("email: " + person ["email"]);
+console.log( person ["email"]);
 
 // 6
 delete person.email;
